@@ -38,16 +38,17 @@ setInterval(() => {
   const date = time.getDate();
   const day = time.getDay();
   var hour = time.getHours();
+  var ampm;
+    if (hour >= 12) {
+      ampm = "PM";
+    } else {
+      ampm = "AM";
+    }
 
   if (hour >= 13) {
     hour = hour % 12;
   }
-  let ampm;
-  if (hour >= 12) {
-    ampm = "PM";
-  } else {
-    ampm = "AM";
-  }
+  
 
   const minutes = time.getMinutes();
   // const sec = time.getSeconds();
