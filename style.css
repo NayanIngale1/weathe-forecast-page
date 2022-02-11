@@ -45,6 +45,7 @@ body {
 }
 
 #iframe {
+  margin-top: 10px;
   height: 20vw;
   width: 30vw;
   border: 2px solid yellow;
@@ -191,13 +192,11 @@ body {
     align-items: none;
     overflow-x: scroll;
   }
-  /* #iframe {
+  #iframe {
     height: 30vw;
 
     width: 40vw;
-    margin-top: -20%;
-    margin-left: 40%;
-  } */
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -241,20 +240,23 @@ body {
   .current-info .others .weather-item {
     font-size: 14px;
   }
-}
-@media (min-width: 390px) and (max-width: 575px) {
   #iframe {
     height: 40vw;
-    width: 40vw;
-    /* margin-top: -100%;
-    margin-left: 45%; */
+    width:50vw;
+  }
+}
+@media only screen and (max-width: 575px) {
+  #iframe {
+    height: 50vw;
+    width: 70vw;
   }
  .current-info .others{
     max-width: 150px;
   }
-}
-@media only screen and (max-width: 390px) {
-  #iframe {
-    display: none;
+    .place-container {
+    text-align: start;
+    margin-top: 15px;
   }
 }
+
+
