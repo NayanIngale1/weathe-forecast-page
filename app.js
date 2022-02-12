@@ -1,12 +1,12 @@
-const key = "c622aa23f881fa032aa1de14fa02a71b";
+const key = "a9f97e4af8263f6c0367aa8155832086";
 
 const timeEl = document.getElementById("time");
 const dateEl = document.getElementById("date");
-const currItems = document.getElementById("current-temp");
+const currentWeather = document.getElementById("current-weather-items");
 const timezone = document.getElementById("time-zone");
 const countryEl = document.getElementById("country");
 const weatherForecastEl = document.getElementById("weather-forecast");
-const currentTempEl = document.getElementById("current-temp");
+const currItems = document.getElementById("current-temp");
 let city;
 const days = [
   "Sunday",
@@ -75,7 +75,7 @@ const liveData = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log('data:', data)        
         showWeatherData(data);
       });
   });
@@ -132,17 +132,17 @@ function showWeatherData(data) {
     "iframe"
   ).src = `https://maps.google.com/maps?q=${data.lat},${data.lon}&t=k&z=13&ie=UTF8&iwloc=&output=embed`;
 
-  currItems.innerHTML = `<div class="weather-item">
+  currentWeather.innerHTML = `<div class="weather-item">
                 <div>Humidity</div>
-                <div>${humidity}</div>
+                <div>${humidity} %</div>
               </div>
               <div class="weather-item">
                 <div>Pressure</div>
-                <div>${pressure}</div>
+                <div>${pressure} hPa</div>
               </div>
               <div class="weather-item">
                 <div>Wind Speed</div>
-                <div>${wind_speed}</div>
+                <div>${wind_speed} m/s N</div>
               </div>
               <div class="weather-item">
                 <div>Sunrise</div>
